@@ -1,0 +1,22 @@
+.full-vh {
+  min-height: calc(100vh - 56px);
+}
+
+.img-container {
+  background-color: #b9d3f8;
+  background-image: url("../../../assets/images/CustomForm.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.7;
+  transition: 0.1s ease-in-out;
+}
+
+.color-blue {
+  color: var(--blue);
+}
+
+.btn,
+.btn:hover {
+  background-color: var(--blue);
+}
