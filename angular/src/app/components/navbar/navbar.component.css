@@ -2,4 +2,5 @@
 
 .navbar-brand {
   font-family: "Gasoek One", sans-serif;
+  color: var(--blue);
 }

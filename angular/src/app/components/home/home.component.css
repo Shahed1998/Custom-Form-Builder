@@ -3,6 +3,8 @@
 }
 
 .img-container {
+  content: "";
+  min-height: calc(100vh - 65vh);
   background-color: #b9d3f8;
   background-image: url("../../../assets/images/CustomForm.jpg");
   background-repeat: no-repeat;
