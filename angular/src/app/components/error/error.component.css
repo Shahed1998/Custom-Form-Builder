@@ -1,0 +1,37 @@
+h1 {
+  font-size: 1000%;
+}
+
+h4 {
+  font-size: 200%;
+}
+
+.inner {
+  width: 50vw;
+  margin: 0 auto;
+}
+
+.btn,
+.btn:hover {
+  width: 50%;
+  background-color: var(--blue);
+}
+
+@media only screen and (max-width: 1000px) {
+  h1 {
+    font-size: 500%;
+  }
+
+  h4 {
+    font-size: 100%;
+  }
+
+  .btn,
+  .btn:hover {
+    width: 100%;
+  }
+
+  .inner {
+    width: 90vw;
+  }
+}
