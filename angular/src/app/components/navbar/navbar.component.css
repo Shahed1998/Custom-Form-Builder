@@ -2,3 +2,11 @@
   font-weight: 700;
   color: var(--blue);
 }
+
+.active {
+  border-bottom: 2px solid var(--blue);
+}
+
+.user-active {
+  color: #7aa874;
+}
