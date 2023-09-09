@@ -23,6 +23,10 @@
   background-color: var(--blue);
 }
 
+.redirect {
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 1000px) {
   .inner {
     width: 100%;

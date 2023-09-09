@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { ErrorComponent } from './components/error/error.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,13 +17,10 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     HomeComponent,
     ErrorComponent,
     RegisterComponent,
-    DashboardComponent
+    DashboardComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
