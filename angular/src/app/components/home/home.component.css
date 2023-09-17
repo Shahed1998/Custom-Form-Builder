@@ -27,6 +27,12 @@
   cursor: pointer;
 }
 
+.view-password {
+  top: 45px;
+  right: 10px;
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 1000px) {
   .inner {
     width: 100%;

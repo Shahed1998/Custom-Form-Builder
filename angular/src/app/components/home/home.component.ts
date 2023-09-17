@@ -15,6 +15,7 @@ import {
 })
 export class HomeComponent implements OnInit {
   loginForm!: FormGroup;
+  loginBtnPressed: boolean = false;
 
   constructor(private titleService: TitleService, private fb: FormBuilder) {}
   ngOnInit(): void {
@@ -23,11 +24,25 @@ export class HomeComponent implements OnInit {
   }
 
   loginFormBuilder() {
-    this.loginForm = this.fb.group({
-      email: ['', Validators.required],
-      password: ['', Validators.required],
-      rememberMe: [false],
-    });
+    this.loginForm = this.fb.group(
+      {
+        email: ['', Validators.required],
+        password: ['', Validators.required],
+        rememberMe: [false],
+      },
+      {
+        validators: [this.emailValidatorFn],
+      }
+    );
+  }
+
+  // Custom validation
+  emailValidatorFn(control: AbstractControl) {
+    var regex =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return regex.test(control.get('email')!.value)
+      ? null
+      : { invalidEmail: true };
   }
 
   // -----------------------------------------------------------
@@ -40,5 +55,13 @@ export class HomeComponent implements OnInit {
 
   get Password() {
     return this.loginForm.get('password') as FormControl;
+  }
+
+  // -----------------------------------------------------------
+  // Form submit and reset
+  // -----------------------------------------------------------
+  login() {
+    this.loginBtnPressed = true;
+    console.log(this.loginForm);
   }
 }
